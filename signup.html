@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up Page</title>
+
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+    <div class="signup-card">
+
+        <!-- LEFT SIDE: SIGN UP FORM -->
+        <div class="signup-panel">
+
+            <h1>Sign Up</h1>
+
+            <p class="subtitle">Let the awesome begin</p>
+
+            <form id="signupForm">
+
+                <!-- Full Name -->
+                <div class="name-field">
+                    <label for="fullName">Full name</label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="John Surname"
+                        required
+                    >
+
+                    <span id="nameCheck" class="checkmark">✓</span>
+                </div>
+
+                <!-- Email -->
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                >
+
+                <!-- Password -->
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    minlength="8"
+                    required
+                >
+
+                <!-- Repeat Password -->
+                <input
+                    type="password"
+                    id="repeatPassword"
+                    placeholder="Repeat Password"
+                    minlength="8"
+                    required
+                >
+
+                <!-- Buttons -->
+                <div class="form-buttons">
+
+                    <button type="submit" class="signup-button">
+                        Sign Up
+                    </button>
+
+                    <button type="button" class="back-button" id="backButton">
+                        Go Back
+                    </button>
+
+                </div>
+
+            </form>
+
+            <!-- Message -->
+            <p id="message" class="message"></p>
+
+            <!-- Login Link -->
+            <div class="account-link" id="accountLink">
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+                <span>⟶</span>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer-links">
+
+                <a href="#" id="termsLink">Terms and Conditions</a>
+
+                <a href="#" id="privacyLink">Privacy Policy</a>
+
+            </footer>
+
+        </div>
+
+
+        <!-- RIGHT SIDE: ARCHITECTURAL IMAGE -->
+        
+<!-- RIGHT SIDE: IMAGE -->
+<!-- <div class="art-panel">
+    <img
+        src="https://thumbs.dreamstime.com/b/software-developer-drinking-coffee-coding-laptop-cafe-displaying-code-sits-table-next-to-cup-notepad-setting-397174441.jpg"
+        alt="Software developer coding on a laptop"
+    >
+</div> -->
+
+
+    </div>
+
+    <script src="signup.js"></script>
+
+</body>
+</html>

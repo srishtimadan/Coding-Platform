@@ -1,0 +1,365 @@
+/* =========================
+   1. RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   2. PAGE BACKGROUND
+========================= */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Same coding background image */
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.40),
+            rgba(0, 0, 0, 0.40)
+        ),
+        url("https://thumbs.dreamstime.com/b/software-developer-drinking-coffee-coding-laptop-cafe-displaying-code-sits-table-next-to-cup-notepad-setting-397174441.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* =========================
+   3. MAIN SIGNUP CARD
+========================= */
+.signup-card {
+    width: 100%;
+    max-width: 460px;
+    min-height: 0;
+
+    display: block;
+
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   4. SIGNUP PANEL
+========================= */
+.signup-panel {
+    width: 100%;
+    padding: 38px 36px 28px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background-color: #ffffff;
+}
+
+/* =========================
+   5. HEADING
+========================= */
+h1 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+
+    margin-bottom: 6px;
+    color: #111111;
+}
+
+/* =========================
+   6. SUBTITLE
+========================= */
+.subtitle {
+    font-size: 13px;
+    color: #666666;
+
+    margin-bottom: 26px;
+}
+
+/* =========================
+   7. FORM
+========================= */
+#signupForm {
+    width: 100%;
+    max-width: none;
+}
+
+/* =========================
+   8. INPUT FIELDS
+========================= */
+input {
+    display: block;
+
+    width: 100%;
+    height: 43px;
+
+    margin-bottom: 13px;
+    padding: 10px 12px;
+
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+
+    background-color: #ffffff;
+    color: #171717;
+
+    font-size: 13px;
+    font-family: inherit;
+
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Placeholder */
+input::placeholder {
+    color: #858585;
+}
+
+/* Input focus */
+input:focus {
+    border-color: #333333;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.07);
+}
+
+/* =========================
+   9. NAME FIELD
+========================= */
+.name-field {
+    position: relative;
+    width: 100%;
+}
+
+.name-field label {
+    position: absolute;
+
+    top: 5px;
+    left: 12px;
+
+    font-size: 9px;
+    color: #777777;
+
+    pointer-events: none;
+}
+
+.name-field input {
+    padding-top: 17px;
+    padding-right: 38px;
+    margin-bottom: 13px;
+}
+
+/* =========================
+   10. NAME CHECKMARK
+========================= */
+.checkmark {
+    position: absolute;
+
+    right: 12px;
+    top: 13px;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    background-color: #08b94e;
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.checkmark.visible {
+    display: flex;
+}
+
+/* =========================
+   11. BUTTONS
+========================= */
+.form-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 12px;
+    margin-top: 12px;
+}
+
+button {
+    min-height: 40px;
+    padding: 0 22px;
+
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+/* Signup button */
+.signup-button {
+    color: #ffffff;
+    background-color: #111111;
+    border: 1px solid #111111;
+}
+
+.signup-button:hover {
+    background-color: #333333;
+}
+
+/* Go back button */
+.back-button {
+    color: #222222;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.back-button:hover {
+    background-color: #f4f4f4;
+}
+
+/* =========================
+   12. STATUS MESSAGE
+========================= */
+.message {
+    width: 100%;
+    min-height: 0;
+
+    margin-top: 12px;
+
+    color: #23753a;
+    font-size: 12px;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   13. LOGIN LINK
+========================= */
+.account-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 22px;
+    padding-bottom: 5px;
+
+    color: #111111;
+    font-size: 13px;
+    text-decoration: none;
+
+    border-bottom: 1px solid #111111;
+}
+
+.account-link span {
+    font-size: 19px;
+    line-height: 1;
+}
+
+.account-link:hover {
+    opacity: 0.65;
+}
+
+/* =========================
+   14. FOOTER LINKS
+========================= */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    margin-top: 36px;
+    padding-top: 12px;
+}
+
+.footer-links a {
+    color: #777777;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #111111;
+    text-decoration: underline;
+}
+
+/* =========================
+   15. TABLET
+========================= */
+@media (max-width: 700px) {
+    body {
+        padding: 20px;
+        background-attachment: scroll;
+    }
+
+    .signup-card {
+        max-width: 460px;
+    }
+
+    .signup-panel {
+        padding: 32px 28px 26px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
+
+/* =========================
+   16. SMALL MOBILE
+========================= */
+@media (max-width: 400px) {
+    body {
+        padding: 12px;
+    }
+
+    .signup-panel {
+        padding: 26px 20px 22px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    .subtitle {
+        margin-bottom: 22px;
+    }
+
+    input {
+        height: 42px;
+        font-size: 12px;
+    }
+
+    .form-buttons {
+        gap: 9px;
+    }
+
+    button {
+        padding: 0 16px;
+    }
+
+    .footer-links {
+        gap: 12px;
+        margin-top: 28px;
+    }
+}

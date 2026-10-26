@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Two Sum · Practice</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stylecode.css">
+</head>
+<body>
+<header>
+  <div class="logo"><i></i>Loopline</div>
+  <button class="pill">Problems</button>
+  <div class="sp"></div>
+  <button class="pill" id="theme">Theme</button>
+  <button class="btn run" id="debug">Debug</button>
+  <button class="btn run" id="run">Run tests</button>
+  <button class="btn sub" id="submit">Submit</button>
+</header>
+
+<main>
+  <nav role="tablist" aria-label="Problem sections">
+    <button role="tab" aria-selected="true" data-p="p1"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/></svg>Problem</button>
+    <button role="tab" aria-selected="false" data-p="p2"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10c1 1 1 2 1 3h6c0-1 0-2 1-3a6 6 0 0 0-4-10z"/></svg>Hints</button>
+    <button role="tab" aria-selected="false" data-p="p3"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>Solutions</button>
+    <button role="tab" aria-selected="false" data-p="p4"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>History</button>
+  </nav>
+
+  <section class="brief">
+    <div class="pane on" id="p1">
+      <h1>Two Sum</h1>
+      <div class="tags"><span>Easy</span><span class="t">Arrays</span><span class="t">Hash map</span><span class="t">Solved</span></div>
+      <div class="prose">
+        <p>You’re given an array of integers <code>nums</code> and an integer <code>target</code>. Return the indices of the two numbers that add up to <code>target</code>.</p>
+        <p>Each input has exactly one solution, and you can’t use the same element twice. The answer can be in any order.</p>
+        <div class="ex"><b>Example 1</b><br>nums = [2,7,11,15], target = 9<br>output: [0,1]<br>2 + 7 = 9, so we return the indices 0 and 1.</div>
+        <div class="ex"><b>Example 2</b><br>nums = [3,2,4], target = 6<br>output: [1,2]</div>
+        <p><strong>Constraints:</strong> 2 ≤ <code>nums.length</code> ≤ 10⁴, and exactly one valid answer exists.</p>
+      </div>
+    </div>
+    <div class="pane" id="p2">
+      <h1>Hints</h1><p class="prose">Tap a hint to reveal it.</p>
+      <div class="hint" tabindex="0"><span>A brute force check of every pair works, but takes O(n²) time.</span></div>
+      <div class="hint" tabindex="0"><span>For each number, you’re really looking for target − number.</span></div>
+      <div class="hint" tabindex="0"><span>Store values you’ve seen in a hash map so each lookup is O(1).</span></div>
+    </div>
+    <div class="pane" id="p3">
+      <h1>Solutions</h1>
+      <div class="prose"><p>Try the problem yourself first. These two approaches are shown in the language selected in the editor.</p><div id="solList"></div></div>
+    </div>
+    <div class="pane" id="p4">
+      <h1>History</h1>
+      <div class="prose" id="hist"><p>Your submissions will show up here.</p></div>
+    </div>
+  </section>
+
+  <section class="bench">
+    <div class="editor">
+      <div class="etop">
+        <select id="lang" aria-label="Language"><option value="js">JavaScript</option><option value="java">Java</option></select>
+        <span class="sp"></span><span id="pos">Ln 1, Col 1</span>
+        <button class="pill" id="reset" style="background:none;color:var(--edink);border-color:#333962">Reset</button>
+      </div>
+      <div class="code"><div class="gut" id="gut"></div><textarea id="src" spellcheck="false" aria-label="Code editor"></textarea></div>
+    </div>
+    <div class="console" aria-live="polite">
+      <div id="res"><h2>Results</h2>
+      <div class="cases" id="cases"></div>
+      <div class="out" id="out">Run your code to see how it does against the test cases.</div></div>
+      <div id="dbg" hidden>
+        <h2>Debugger</h2>
+        <div class="drow"><label>nums <input id="din" value="2,7,11,15"></label><label>target <input id="dt" value="9" size="4"></label><button class="pill" id="dgo">Start debugging</button><button class="pill" id="dstop">Stop</button></div>
+        <div id="dctl" class="drow" hidden><button class="pill" id="dprev">Step back</button><button class="pill" id="dnext">Step forward</button><button class="pill" id="dcont">Continue to breakpoint</button><button class="pill" id="drest">Restart</button></div>
+        <div class="out" id="dstate">Click a line number in the editor to set a breakpoint, then start debugging.</div>
+        <div id="dvars"></div><pre class="out" id="dlog"></pre>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>

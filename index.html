@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeForge - Coding Practice</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="nav-inner">
+      <a href="#" class="brand"><span class="brand-icon">&lt;/&gt;</span> CodeForge</a>
+
+      <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation">☰</button>
+
+      <nav id="navLinks">
+        <a href="#practice">Practice</a>
+        <a href="#daily">Daily question</a>
+        <a href="#workspace">Code editor</a>
+      </nav>
+
+      <a href="#practice" class="nav-button">Start practising</a>
+      <div class="auth-actions" aria-live="polite">
+        <span id="userBadge" class="user-badge" hidden></span>
+        <a id="navLogin" href="login.html" class="nav-button">Login</a>
+        <a id="navSignup" href="signup.html" class="nav-button">Sign up</a>
+        <button id="logoutBtn" type="button" class="nav-button logout-button" hidden>Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <div class="welcome-copy">
+        <p class="eyebrow">A PLACE TO PRACTISE CODING</p>
+        <h1>Getting better at coding<br>starts with <span>practice.</span></h1>
+        <p class="intro">
+          Solve problems, try different approaches and keep track of what
+          you have completed. No pressure to get everything right on the
+          first try.
+        </p>
+        <a href="#practice" class="button button-blue">Browse problems <span>→</span></a>
+      </div>
+
+      <div class="welcome-note">
+        <div class="note-top">
+          <span class="file-dot"></span>
+          <span>main.java</span>
+          <span class="language-label">Java</span>
+        </div>
+        <pre><code><span class="code-purple">class</span> Main {
+    <span class="code-purple">public static void</span> main(String[] args) {
+        <span class="code-green">System.out.println</span>(
+            <span class="code-orange">"Practice makes progress."</span>
+        );
+    }
+}</code></pre>
+        <div class="note-bottom">
+          <span>Keep it simple. Keep learning.</span>
+          <span class="status-dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview" aria-label="Your progress">
+      <div class="overview-item">
+        <div class="overview-icon">✓</div>
+        <div>
+          <p>Problems completed</p>
+          <h2 id="solvedCount">0 <small>/ 4</small></h2>
+        </div>
+      </div>
+
+      <div class="overview-item">
+        <div class="overview-icon">↗</div>
+        <div>
+          <p>Practice points</p>
+          <h2 id="pointsCount">0</h2>
+        </div>
+      </div>
+
+      <div class="overview-item">
+        <div class="overview-icon">◎</div>
+        <div>
+          <p>Completion</p>
+          <h2 id="completionCount">0%</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="practice-section" id="practice">
+      <div class="section-top">
+        <div>
+          <p class="eyebrow">YOUR PRACTICE LIST</p>
+          <h2>What do you want to solve?</h2>
+          <p class="section-description">
+            Start with an easy one or pick a topic you want to improve.
+          </p>
+        </div>
+      </div>
+
+      <div class="filter-bar">
+        <div class="search-box">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Find a problem..." aria-label="Search problems">
+        </div>
+
+        <select id="topicFilter" aria-label="Filter by topic">
+          <option value="All">All topics</option>
+          <option value="Arrays">Arrays</option>
+          <option value="Strings">Strings</option>
+          <option value="Hash Map">Hash Map</option>
+          <option value="Math">Math</option>
+          <option value="Loops">Loops</option>
+        </select>
+
+        <select id="difficultyFilter" aria-label="Filter by difficulty">
+          <option value="All">All levels</option>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+        </select>
+      </div>
+
+      <div class="list-heading">
+        <span>PROBLEM</span>
+        <span>TOPIC</span>
+        <span>LEVEL</span>
+        <span>POINTS</span>
+        <span>STATUS</span>
+      </div>
+
+      <div id="problemList" class="problem-list"></div>
+      <p id="emptyMessage" class="empty-message" hidden>
+        No matching problems. Try changing the search or filters.
+      </p>
+
+      <p class="list-note">
+        These are sample practice questions for the CodeForge demo.
+      </p>
+    </section>
+
+    <section class="daily-section" id="daily">
+      <div class="daily-copy">
+        <p class="eyebrow">A SMALL DAILY GOAL</p>
+        <h2>Today's question</h2>
+        <p>
+          You don't have to solve ten questions a day. Pick one, understand
+          the logic and try to solve it yourself.
+        </p>
+      </div>
+
+      <div class="daily-question">
+        <div class="question-meta">
+          <span class="level easy">Easy</span>
+          <span>Arrays · 20 points</span>
+        </div>
+        <h3>Find the largest element</h3>
+        <p>
+          Given an array of numbers, return the largest number in it.
+          Try solving it without using a sorting function.
+        </p>
+        <div class="sample-io">
+          <div>
+            <span>Example input</span>
+            <code>[4, 9, 2, 17, 6]</code>
+          </div>
+          <div>
+            <span>Expected output</span>
+            <code>17</code>
+          </div>
+        </div>
+        <button class="button button-blue" id="dailyButton">Try in editor →</button>
+      </div>
+    </section>
+
+    <section class="workspace-section" id="workspace">
+      <div class="section-top">
+        <div>
+          <p class="eyebrow">EXPERIMENT A LITTLE</p>
+          <h2>Code workspace</h2>
+          <p class="section-description">
+            Write a small Java example and preview simple print statements.
+          </p>
+        </div>
+      </div>
+
+      <div class="workspace">
+        <div class="workspace-bar">
+          <div class="workspace-file">
+            <span class="file-mini-icon">J</span>
+            Main.java
+          </div>
+          <span class="workspace-mode">Demo editor · Java</span>
+        </div>
+
+        <label class="sr-only" for="codeInput">Write your Java code</label>
+        <textarea id="codeInput" spellcheck="false" autocapitalize="off">class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, CodeForge!");
+    }
+}</textarea>
+
+        <div class="workspace-controls">
+          <button class="button button-blue" id="runButton">Preview output</button>
+          <button class="button button-plain" id="resetButton">Reset code</button>
+          <button class="button button-plain" id="clearButton">Clear output</button>
+        </div>
+
+        <div class="output-panel">
+          <div class="output-title">
+            <span>Console output</span>
+            <span id="runStatus">Waiting for code</span>
+          </div>
+          <pre id="outputText">Your output will appear here.</pre>
+        </div>
+
+        <p class="editor-warning">
+          This is a front-end demo, not a Java compiler. It only previews
+          basic System.out.println() statements.
+        </p>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="about-mark">&lt;/&gt;</div>
+      <div>
+        <p class="eyebrow">ABOUT CODEFORGE</p>
+        <h2>Made for everyday coding practice.</h2>
+        <p>
+          CodeForge is a student project built around a simple idea:
+          practising a little every day can make programming easier.
+          It brings sample questions, basic progress tracking and a
+          small code preview into one place.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <a href="#" class="brand"><span class="brand-icon">&lt;/&gt;</span> CodeForge</a>
+      <p>A small project with room to grow.</p>
+    </div>
+    <p class="footer-right">© <span id="currentYear"></span> CodeForge · Student project</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="home.js"></script>
+</body>
+</html>

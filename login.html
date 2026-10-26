@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Page</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-card">
+
+        <!-- LEFT SIDE: LOGIN FORM -->
+        <div class="login-panel">
+
+            <h1>Login</h1>
+
+            <p class="subtitle">
+                If you have an account, please login
+            </p>
+
+            <form id="loginForm">
+
+                <!-- Email -->
+                <label for="email">Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter Email Address"
+                    required
+                >
+
+                <!-- Password -->
+                <label for="password">Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter Password"
+                    required
+                    minlength="8"
+                >
+
+                <!-- Forgot Password -->
+                <div class="forgot-password">
+                    <a href="#" id="forgotLink">Forgot Password?</a>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-button">
+                    Log In
+                </button>
+
+            </form>
+
+            <!-- OR Divider -->
+            <div class="divider">
+                <span></span>
+                <p>OR</p>
+                <span></span>
+            </div>
+
+            <!-- Google Login Button -->
+            <button type="button" class="google-button" id="googleButton">
+
+                <span class="google-logo">G</span>
+
+                <span>Login with Google</span>
+
+            </button>
+
+            <!-- Register Section -->
+            <div class="register-section">
+
+                <p>If you don't have an account...</p>
+
+                <button
+                    type="button"
+                    class="register-button"
+                    id="registerButton"
+                >
+                    Register
+                </button>
+
+            </div>
+
+            <!-- Message area -->
+            <p id="message" class="message"></p>
+
+        </div>
+
+
+        <!-- RIGHT SIDE: CODING IMAGE -->
+        <div class="image-panel">
+
+            <img
+                src="https://thumbs.dreamstime.com/b/software-developer-drinking-coffee-coding-laptop-cafe-displaying-code-sits-table-next-to-cup-notepad-setting-397174441.jpg"
+                alt="Computer screens displaying programming code"
+            >
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
